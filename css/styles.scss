@@ -10,6 +10,7 @@
 //===========================
 //=============For Table Screen Size==============
 $tablet: 768px;
+$mobile: 320px;
 
 @media (max-width: $tablet) {
   .header {
@@ -19,6 +20,11 @@ $tablet: 768px;
 
     &__bottom {
       height: 400px;
+      h1 {
+        font-size: 24px;
+        padding: 0;
+        width: 200px;
+      }
     }
   }
 
@@ -54,6 +60,69 @@ footer {
   }
 
  }
+  
+}
+
+@media (max-width: $mobile) {
+
+  .header__top {
+    padding-left: 0;
+    flex-direction: column;
+
+    &--navList {
+      margin:0;
+      padding:0;
+
+      .active {
+      padding-bottom: 11px;
+      }
+
+      li {
+        margin: 0;
+      }
+    }
+
+    &--navList a {
+      width: 160px;
+    }
+  }
+
+  // .header_bottom {
+  //   h1 {
+  //     height: 
+  //   }
+  // }
+
+  .music {
+    width: 288px;
+    &__top {
+
+      &--image {
+
+      }
+    }
+
+    &--bottom {
+      height: 183px;
+    }
+  }
+
+  .photoGallery__box {
+    width: 288px;
+  }
+
+  footer {
+    width: 320px;
+    
+  .footer {
+    width: 100%;
+  }
+
+    &__row1, &__row2 {
+      flex-direction: column;
+    }
+  }
+
   
 }
 
