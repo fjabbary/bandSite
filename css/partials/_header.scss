@@ -1,0 +1,65 @@
+.header {
+  background: $color-black;
+
+  &__top {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 180px;
+
+    nav {
+      height: 100%;
+    }
+
+    &--navList {
+      list-style: none;
+      display: flex;
+      padding-left: 56px;
+      line-height: 40px;
+      margin-top: 20px;
+    }
+
+    &--navList li {
+      margin-right: 56px;
+    }
+   
+    //This styles extended
+   .link-style {
+      color: $color-alabaster;
+      text-decoration: none;
+    }
+
+    &--navList a {
+      @extend .link-style;
+      display: inline-block;
+      width: 80px;
+      text-align: center;
+      color: $color-alabaster;
+    }
+
+    &--navList .active {
+      border-bottom: 4px solid $color-white;
+      padding-bottom: 15px;
+      color: $color-white !important;
+    }
+  }
+
+  &__bottom {
+    height: 670px;
+    background-image: linear-gradient(to left, rgba($color-black,.5), rgba($color-black,0.5) ), url(../assets/Images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    h1 {
+      color: #fff;
+      padding-left: 180px;
+      font-size: 60px;
+      line-height: 68px;
+      width: 520px;
+      margin: 0;
+      position: absolute;
+      top: 200px;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+
+  footer {
+    background-color: $color-black;
+    padding: 40px 0;
+  }
+
+  .footer {
+    width: 1080px;
+    margin: 0 auto;
+    color: $color-white;
+
+    &__row1 {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &--header {
+        @include header2();
+        margin: 0 80px 0 0;
+      }
+
+      &--icons i {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        margin-right: 32px;
+      }
+
+      &--icons i:first-child {
+        background: url(../assets/Icons/PNG/Icon-instagram.png) no-repeat 3px 3px;
+      }
+
+      &--icons i:nth-child(2) {
+        background: url(../assets/Icons/PNG/Icon-facebook.png) no-repeat 3px 3px;
+      }
+
+      &--icons i:nth-child(3) {
+        background: url(../assets/Icons/PNG/Icon-twitter.png) no-repeat 3px 3px;
+      }
+
+      &--brand {
+        font-size: 2em;
+        text-transform: uppercase;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &__row2 {
+      display: flex;
+      justify-content: flex-start;
+      
+      h4 {
+        font-weight: 500;
+        @include header4();
+      }
+
+      &--left, &--middle, &--right {
+        margin-right: 40px;
+      }
+
+      &--left h4:first-child,
+      &--middle h4:first-child,
+      &--right h4:first-child {
+        margin-bottom: 0;
+      }
+
+      &--left h4:nth-child(2),
+      &--middle h4:nth-child(2),
+      &--right h4:nth-child(2)
+      {
+        margin-top: 0;
+      }
+
+      &--left p,
+      &--middle p,
+      &--right p
+      {
+        margin: 0;
+      }
+
+      &--left p:nth-child(5),
+      &--middle p:nth-child(5),
+      &--right p:nth-child(5)
+      
+      {
+        margin-top: 40px;
+      }
+    }
+
+    &__row3 {
+      p {
+        font-size: 14px;
+        margin: 40px 0 0 0;
+      }
+    }
+  }

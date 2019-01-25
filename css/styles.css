@@ -1,0 +1,310 @@
+.header {
+  background: #323232;
+}
+
+.header__top {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 180px;
+}
+
+.header__top nav {
+  height: 100%;
+}
+
+.header__top--navList {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 56px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+.header__top--navList li {
+  margin-right: 56px;
+}
+
+.header__top .link-style, .header__top .header__top--navList a, .header__top--navList .header__top a {
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.header__top--navList a {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  color: #FAFAFA;
+}
+
+.header__top--navList .active {
+  border-bottom: 4px solid #fff;
+  padding-bottom: 15px;
+  color: #fff !important;
+}
+
+.header__bottom {
+  height: 670px;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(../assets/Images/hero.jpg);
+  background-image: linear-gradient(to left, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/Images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header__bottom h1 {
+  color: #fff;
+  padding-left: 180px;
+  font-size: 60px;
+  line-height: 68px;
+  width: 520px;
+  margin: 0;
+  position: absolute;
+  top: 200px;
+}
+
+* {
+  font-family: 'AvenirNext LT Pro';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.music {
+  background: #fff;
+  width: 896px;
+  margin: auto;
+}
+
+.music__top--header1 {
+  font-size: 36px;
+  line-height: 44px;
+  margin: 48px 0;
+  position: relative;
+  left: -92px;
+}
+
+.music__top--image {
+  width: 100%;
+  height: 450px;
+}
+
+.music__top--header2 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 48px 0 40px 0;
+}
+
+.music__top p {
+  margin-bottom: 56px;
+}
+
+.music__top--musician {
+  font-weight: bold;
+}
+
+.music__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.music__bottom--left {
+  width: 420px;
+  margin-right: 40px;
+}
+
+.music__bottom--right {
+  width: 420px;
+}
+
+.music__bottom p {
+  margin-bottom: 48px;
+}
+
+.photoGallery {
+  background: #FAFAFA;
+}
+
+.photoGallery__box {
+  width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.photoGallery__box--header {
+  padding: 48px 0 64px 0;
+  margin: 0;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.photoGallery__box--images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.photoGallery__box--images figure {
+  width: 344px;
+  height: 193px;
+  margin: 0;
+}
+
+.photoGallery__box--images figure:not(:nth-child(3n)) {
+  margin: 0 24px 24px 0;
+}
+
+.photoGallery__box--images img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: #323232;
+  padding: 40px 0;
+}
+
+.footer {
+  width: 1080px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.footer__row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.footer__row1--header {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 80px 0 0;
+}
+
+.footer__row1--icons i {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  margin-right: 32px;
+}
+
+.footer__row1--icons i:first-child {
+  background: url(../assets/Icons/PNG/Icon-instagram.png) no-repeat 3px 3px;
+}
+
+.footer__row1--icons i:nth-child(2) {
+  background: url(../assets/Icons/PNG/Icon-facebook.png) no-repeat 3px 3px;
+}
+
+.footer__row1--icons i:nth-child(3) {
+  background: url(../assets/Icons/PNG/Icon-twitter.png) no-repeat 3px 3px;
+}
+
+.footer__row1--brand {
+  font-size: 2em;
+  text-transform: uppercase;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  right: 0;
+}
+
+.footer__row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer__row2 h4 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__row2--left, .footer__row2--middle, .footer__row2--right {
+  margin-right: 40px;
+}
+
+.footer__row2--left h4:first-child,
+.footer__row2--middle h4:first-child,
+.footer__row2--right h4:first-child {
+  margin-bottom: 0;
+}
+
+.footer__row2--left h4:nth-child(2),
+.footer__row2--middle h4:nth-child(2),
+.footer__row2--right h4:nth-child(2) {
+  margin-top: 0;
+}
+
+.footer__row2--left p,
+.footer__row2--middle p,
+.footer__row2--right p {
+  margin: 0;
+}
+
+.footer__row2--left p:nth-child(5),
+.footer__row2--middle p:nth-child(5),
+.footer__row2--right p:nth-child(5) {
+  margin-top: 40px;
+}
+
+.footer__row3 p {
+  font-size: 14px;
+  margin: 40px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .header__top {
+    padding-left: 24px;
+  }
+  .header__bottom {
+    height: 400px;
+  }
+  .music {
+    width: 720px;
+  }
+  .music__top--header1 {
+    left: 0;
+  }
+  .music__top--image {
+    height: 362px;
+  }
+  .music__bottom--left {
+    margin-right: 24px;
+  }
+  .photoGallery__box {
+    width: 720px;
+  }
+  .photoGallery__box--images figure {
+    width: 224px;
+    height: 126px;
+  }
+  footer .footer {
+    width: 720px;
+  }
+  footer .footer__row1--brand {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

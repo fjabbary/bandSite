@@ -1,0 +1,59 @@
+//For Desktop screen size
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/header";
+@import "./partials/root";
+@import "./partials/music";
+@import "./partials/gallery";
+@import "./partials/footer";
+
+//===========================
+//=============For Table Screen Size==============
+$tablet: 768px;
+
+@media (max-width: $tablet) {
+  .header {
+    &__top {
+      padding-left: 24px;
+    }
+
+    &__bottom {
+      height: 400px;
+    }
+  }
+
+  .music {
+    width: 720px;
+    &__top--header1 {
+        left: 0;
+    }
+    &__top--image {
+        height: 362px;
+      }
+
+    &__bottom--left {
+      margin-right: 24px;
+      }
+}
+
+.photoGallery__box {
+  width: 720px; //224*3 + 2*24
+
+  &--images figure {
+    width: 224px;
+    height: 126px;
+  }
+}
+
+footer {
+  .footer {
+    width: 720px;
+    &__row1--brand {
+      font-size: 1.5em;
+  }
+  }
+
+ }
+  
+}
+
