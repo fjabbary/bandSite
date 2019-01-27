@@ -5,6 +5,9 @@
   margin: auto;
 
   &__top {
+
+    margin-left: 16px;
+    
     &--header1 {
       @include header1();
        margin: 48px 0;

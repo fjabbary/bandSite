@@ -9,8 +9,6 @@
 
 //===========================
 //=============For Table Screen Size==============
-$tablet: 768px;
-$mobile: 320px;
 
 @media (max-width: $tablet) {
   .header {
@@ -20,10 +18,11 @@ $mobile: 320px;
 
     &__bottom {
       height: 400px;
-      h1 {
-        font-size: 24px;
-        padding: 0;
-        width: 200px;
+
+      &--header {
+        padding-left: 24px;
+        width: 550px;
+        top: 100px;
       }
     }
   }
@@ -58,9 +57,7 @@ footer {
       font-size: 1.5em;
   }
   }
-
  }
-  
 }
 
 @media (max-width: $mobile) {
@@ -69,60 +66,129 @@ footer {
     padding-left: 0;
     flex-direction: column;
 
-    &--navList {
-      margin:0;
-      padding:0;
-
-      .active {
-      padding-bottom: 11px;
-      }
-
-      li {
-        margin: 0;
-      }
+    &--logo {
+      margin-top: 10px;
     }
 
-    &--navList a {
+    &--navList {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &--navList .active {
+      padding-bottom: 0;
+    }
+
+    &--navList li {
+      margin: 0;
       width: 160px;
+      text-align: center;
+    }
+
+    &--navList li a {
+      width: 100%;
     }
   }
 
-  // .header_bottom {
-  //   h1 {
-  //     height: 
-  //   }
-  // }
+  .header__bottom {
+    height: 183px;
 
+    &--header{
+      padding-left: 16px;
+      font-size: 24px;
+      line-height: 32px;
+      top:50%;
+      transform:translateY(-50%);
+    }
+  }
+  
   .music {
+    width: 320px;
+  }
+
+  .music__top {
     width: 288px;
-    &__top {
+    // margin: auto;
 
-      &--image {
-
-      }
+    &--header1{
+      font-size: 24px;
+      line-height: 32px;
+      margin: 32px 0 24px 0;
+      left: 0;
     }
 
-    &--bottom {
-      height: 183px;
+    &--header2{
+      margin: 24px 0 32px 0;
+    }
+
+    &--musician {
+      margin: 0 0 40px 0;
+    }
+
+    &--header2 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  } 
+
+  .music__bottom {
+    flex-direction: column;
+    width: 288px;
+    margin-left: 16px;
+
+    &--left, &--right {
+      width: 100%;
     }
   }
 
   .photoGallery__box {
-    width: 288px;
+    width: 304px;
+    margin-left: 16px;
+
+    &--header {
+      font-size: 24px;
+      line-height: 32px;
+      padding: 32px 0 24px 0;
+    }
+
+    &--images {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &--images figure {
+      width: 288px;
+      height: auto;
+      margin: 0;
+    }
+
+    &--images figure:not(:nth-child(3n)) {  // Chooses all elements expect the ones which are multiply of 3
+      margin-bottom: 16px;
+    }
+
   }
 
   footer {
     width: 320px;
-    
-  .footer {
-    width: 100%;
-  }
 
-    &__row1, &__row2 {
-      flex-direction: column;
+    .footer {
+      width: 288px;
+
+      &__row1 {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--brand {
+          display: none;
+        }
+      }
+
+      &__row2 {
+        flex-direction: column;
+      }
     }
   }
-
-  
 }
 
