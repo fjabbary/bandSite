@@ -1,15 +1,10 @@
-//Styles for music section
 .music {
-  background: $color-white;
   width: 896px;
   margin: auto;
 
   &__top {
-
-    margin-left: 16px;
-    
     &--header1 {
-      @include header1();
+      @include header1-desktop();
        margin: 48px 0;
        position: relative;
        left: -92px; //based on screen size 1440px => 1440 - 896 = 544 , 544/2 = 272px is the distance from the left of screen , 272- 180 = 92px;
@@ -18,15 +13,22 @@
     &--image{
       width: 100%;
       height: 450px;
+      object-fit: cover;
     }
 
     &--header2{
-      @include header2();
+      @include header2-desktop();
       margin: 48px 0 40px 0;
+      width: 800px;
     }
 
     p {
-      margin-bottom: 56px;
+      margin: 0;
+    }
+
+    &--bottomHeader2 {
+      @include header2-desktop();
+      margin: 56px 0 32px 0;
     }
 
     &--musician {
@@ -48,7 +50,7 @@
     }
 
     p {
-      margin-bottom: 48px;
+      margin: 0 0 48px 0;
     }
   }
 }

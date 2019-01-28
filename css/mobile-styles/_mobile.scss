@@ -1,0 +1,156 @@
+@media (max-width: $mobile) {
+
+  .header__top {
+    padding-left: 0;
+    flex-direction: column;
+
+    &--logo {
+      margin-top: 10px;
+    }
+
+    &--navList {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &--navList .active {
+      padding-bottom: 0;
+    }
+
+    &--navList li {
+      margin: 0;
+      width: 160px;
+      text-align: center;
+    }
+
+    &--navList li a {
+      width: 100%;
+    }
+  }
+
+  .header__bottom {
+    height: 183px;
+
+    &--heading {
+      padding-left: 16px;
+      font-size: 24px;
+      line-height: 32px;
+      width: 210px;
+    }
+  }
+  
+  .music {
+    width: 320px;
+  
+
+  &__top {
+    width: 288px;
+    margin: auto;
+
+    &--header1{
+      @include header1-mobile();
+      margin: 32px 0 24px 0;
+    }
+
+    &--header2{
+      @include header2-mobile();
+      margin: 24px 0 32px 0;
+  
+    }
+
+    &--musician {
+      margin: 0 0 40px 0;
+    }
+
+    &--bottomHeader2 {
+      @include header2-mobile();
+      margin: 40px 0 24px 0;
+    }
+  } 
+
+  &__bottom {
+    flex-direction: column;
+    width: 288px;
+    margin-left: 16px;
+
+    &--left, &--right {
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+  .photoGallery__box {
+    width: 304px;
+    margin-left: 16px;
+
+    &--header {
+      font-size: 24px;
+      line-height: 32px;
+      padding: 32px 0 24px 0;
+      width: 288px;
+    }
+
+    &--images {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    &--images figure:not(:nth-child(3n)) {  // Chooses all elements expect the ones which are multiply of 3
+      margin: 0 16px 16px 0;
+    }
+
+    &--images figure {
+      width: 288px;
+      height: 145px;
+      margin: 0 16px 16px 0;
+    }
+  }
+
+  footer {
+    width: 320px;
+
+    .footer {
+      width: 288px;
+
+      &__row1 {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--header {
+          @include header1-mobile();
+        }
+
+        &--brand {
+          display: none;
+        }
+
+        &--icons {
+          margin-top: 10px;
+        }
+      }
+
+      &__row2 {
+        flex-direction: column;
+
+        p, a {
+          font-weight: 100;
+        }
+
+        a {
+          margin: 24px 0;
+        }
+      }
+
+      &__row3 p{
+        font-weight: 100;
+        width: 220px;
+      }
+    }
+  }
+}
+
