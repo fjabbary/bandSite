@@ -51,22 +51,42 @@
     }
   }
 
-  &__bottom {
-    height: 670px;
-    background-image: linear-gradient(to left, rgba($color-black,0.5), rgba($color-black,0.5) ), url(../assets/Images/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
+  &__bottom-show {
+    @include header-bottom();
+    background-image: linear-gradient(to left, rgba($color-black,0.4), rgba($color-black,0.4) ), url(../assets/Images/music.jpg);
+    position: relative;
+
+    &--iframe {
+      width: 436px;
+      height: 146px;
+      position: absolute;
+      right: 180px;
+    }
+
+    &--text {
+      color: $color-white;
+      position: absolute;
+      @include header2-desktop();
+      font-weight: bold;
+      top: 160px;
+      left: 180px;
+      margin: 0;
+    }
 
     &--heading {
-      color: #fff;
-      padding-left: 180px;
-      font-size: 60px;
-      line-height: 68px;
-      width: 520px;
-      margin: 0;
-      animation: moveHorizontal 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      position: absolute;
+      top: 224px;
+      @include main-header();
+    }
+  }
+
+  &__bottom {
+    @include header-bottom();
+    background-image: linear-gradient(to left, rgba($color-black,0.5), rgba($color-black,0.5) ), url(../assets/Images/hero.jpg);
+
+
+    &--heading {
+      @include main-header();
     }
   }
 }

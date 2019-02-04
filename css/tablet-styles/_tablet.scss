@@ -9,7 +9,28 @@
 
       &--heading {
         padding-left: 24px;
-        width: 550px;
+        width: none;
+        display: block;
+      }
+    }
+
+    &__bottom-show {
+      position: relative;
+      &--text {
+        position: absolute;
+        top: 96px;
+        left: 24px;
+        margin: 0;
+      }
+
+      &--heading {
+      top: 150px;
+      padding-left: 24px;
+      }
+
+      &--iframe {
+        left: 24px;
+        bottom: 50px;
       }
     }
   }
@@ -46,6 +67,10 @@
   }
 }
 
+.comment {
+  width: 720px;
+}
+
 footer {
   .footer {
     width: 720px;
@@ -54,5 +79,23 @@ footer {
   }
   }
  }
+
+ .show {
+  flex-direction: column;
+  padding: 48px 24px;
+
+  &__left--header{
+    width: 720px;
+  }
+
+  &__right{
+    width: 720px;
+
+    &--table {
+      width: 100%;
+    }
+  }
+ 
+}
 }
 

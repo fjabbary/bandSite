@@ -27,6 +27,10 @@
     &--navList li a {
       width: 100%;
     }
+
+    &--navList li a:hover {
+      padding-bottom: 0;
+    }
   }
 
   .header__bottom {
@@ -37,6 +41,25 @@
       font-size: 24px;
       line-height: 32px;
       width: 210px;
+    }
+  }
+
+  .header__bottom-show {
+    &--iframe {
+
+    }
+
+    &--text {
+      font-size: 16px;
+      font-weight: normal;
+      top: 64px;
+    }
+
+    &--heading {
+      width: 288px;
+      font-size: 36px;
+      line-height: 60px;
+      top: 110px;
     }
   }
   
@@ -111,6 +134,41 @@
     }
   }
 
+  .comment {
+    width: 288px;
+
+    &__header {
+      @include header2-desktop();
+    }
+
+    &__form {
+      width: 100%;
+
+      &--name input {
+        width: 224px;
+      }
+
+      &--text textarea, &--text{
+        width: 194px;  //224 - 15*2 (padding)
+      }
+
+      &--btn {
+        left: 70px;
+        width: 224px;
+      }
+    }
+
+    &__content {
+      width: 288px;
+      
+
+      &--left {
+        width: 70px;
+        height: 40px;
+      }
+    }
+  }
+
   footer {
     width: 320px;
 
@@ -149,6 +207,66 @@
       &__row3 p{
         font-weight: 100;
         width: 220px;
+      }
+    }
+  }
+
+  .header__bottom-show {
+    &--iframe {
+      width: 288px;
+      left: 15px;
+    }
+  }
+
+  .show {
+    width: 288px;
+    padding: 32px 16px;
+
+    &__left--header {
+      margin: 0 0 40px 0;
+     width: 100%;
+    }
+
+    &__right {
+      width: 288px;
+
+      &--table thead {
+        display: none;
+      }
+
+      &--table, tr {
+        display: inline-grid;
+        width: 100%;
+        padding-top: 16px;
+      }
+
+      &--table td:last-child{
+        width: 100%;
+      }
+
+      &--table td:nth-child(6){
+        margin-bottom: 32px;
+      }
+
+      &--table thead th {
+        display: none;
+      }
+
+      &--table tbody td {
+        margin-bottom: 24px;
+      }
+
+      &--mobile-th{
+        display: block;
+        color: $color-silver;
+        font-weight: normal;
+        text-align: left;
+        margin-bottom: 16px;
+      }
+
+      &--btn {
+        width: 100%;
+        margin: 0;
       }
     }
   }
