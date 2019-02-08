@@ -1,0 +1,29 @@
+@mixin header1-desktop {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+@mixin header2-desktop {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin header3-desktop {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin header4-desktop {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin header1-mobile {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin header2-mobile {
+  font-size: 14px;
+  line-height: 22px;
+}
