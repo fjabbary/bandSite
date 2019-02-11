@@ -23,7 +23,6 @@ function fetchComments() {
 
 fetchComments();
 
-
 form.onsubmit = function (e) {
   if (nameInput.value && commentInput.value) {
     axios({
@@ -52,29 +51,27 @@ form.onsubmit = function (e) {
   e.preventDefault();
 }
 
-
 function displayComment(comments) {
   //Makes comment section to disappear from DOM
   document.querySelector('.comment__mainContent').innerHTML = '';
-  //Loops through the comment array and render markup for each comment for form validation on line 57
 
+  //Loops through the comment array and render markup for each comment for form validation on line 57
   comments.forEach(item => {
     //Creates relative date
     const now = new Date();
     const nowTimestamp = now.getTime();
-    const timeDiff = (nowTimestamp - item.timestamp + 2000) / 1000;
+    const timeDiff = (nowTimestamp - item.timestamp) / 1000;
     let showTime;
 
     if (timeDiff < 60) {
       showTime = ' less than a minute ago';
     } else if (timeDiff > 60 && timeDiff < 3600) {
-      showTime = Math.floor(timeDiff / 60) + ' minute(s) ago';
+      showTime = Math.floor(timeDiff / 60) + ' minutes ago';
     } else if (timeDiff > 3600 && timeDiff < 86400) {
       showTime = Math.floor(timeDiff / 3600) + ' hour(s) ago';
     } else if (timeDiff > 86400) {
       showTime = Math.floor(timeDiff / 86400) + ' day(s) ago';
     }
-
 
     const commentUI = `<div class="comment__content" id=${item.id}> 
                            <div class="comment__content--left">
@@ -96,9 +93,8 @@ function displayComment(comments) {
   });
 }
 
-
 //Add eventListener for Like button
-//Since element was added to the DOM dynamicaly, we have to use DOM Delegation
+//Since element was added to the DOM dynamicaly, Event Delegation was used
 let i = 0;
 
 document.querySelector('.comment__mainContent').addEventListener('click', function (e) {
@@ -127,17 +123,18 @@ document.querySelector('.comment__mainContent').addEventListener('click', functi
 document.querySelector('.comment__mainContent').addEventListener('click', function (e) {
   if (e.target.className === 'comment__content--remove') {
     const id = e.target.parentElement.parentElement.id;
-    if (confirm('Are you sure to delete the comment?')) {
-      axios({
-        method: 'delete',
-        url: `https://project-1-api.herokuapp.com/comments/${id}?api_key=farzinjabbary`,
-      }).then(() => {
-        fetchComments(comments);
-      })
-    }
+
+    axios({
+      method: 'delete',
+      url: `https://project-1-api.herokuapp.com/comments/${id}?api_key=farzinjabbary`,
+    }).then(() => {
+      fetchComments(comments);
+    })
   }
 })
 
+
+// JQuery plugin "waypoint" was used to fade in image and image gallery when scrolling to certain part of webpage
 $('.js--wp-1').waypoint(function () {
   $('.js--wp-1').addClass('animated fadeIn')
 },
@@ -150,7 +147,7 @@ $('.js--wp-2').waypoint(function () {
   $('.js--wp-2').addClass('animated fadeIn')
 },
   {
-    offset: '100%'
+    offset: '50%'
   }
 )
 
